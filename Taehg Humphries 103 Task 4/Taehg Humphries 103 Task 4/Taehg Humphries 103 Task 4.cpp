@@ -26,7 +26,7 @@ void Hangman()//declaring function
 	cout << "-----     \n";
 }
 
-void InvertHangMan()//declaring function
+void Deadman()//declaring function
 {
 	cout << "   ___    \n";
 	cout << "  |   |   \n";
@@ -68,7 +68,7 @@ char Play()
 			else
 			{
 				cout << "\nYour guess is wrong\n";
-				InvertHangMan();
+				Deadman();
 			}
 		}
 	}
