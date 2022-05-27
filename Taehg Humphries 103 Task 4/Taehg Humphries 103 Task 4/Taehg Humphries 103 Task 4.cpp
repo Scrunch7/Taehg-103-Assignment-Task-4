@@ -5,7 +5,7 @@ using std::cin;
 using std::string;
 
 
-void Line(int dashes)//declaring function for line
+void Line(int dashes)
 {
 	for (int i = 0; i < dashes; i++)
 	{
@@ -13,7 +13,7 @@ void Line(int dashes)//declaring function for line
 	}
 }
 
-void Hangman()//declaring function
+void Hangman()
 {
 	cout << "   ___    \n";
 	cout << "  |   |   \n";
@@ -26,7 +26,7 @@ void Hangman()//declaring function
 	cout << "-----     \n";
 }
 
-void Deadman()//declaring function
+void Deadman()
 {
 	cout << "   ___    \n";
 	cout << "  |   |   \n";
@@ -38,7 +38,7 @@ void Deadman()//declaring function
 	cout << "-----     \n";
 }
 
-void WalkMan()//declaring function
+void WalkMan()
 {
 	cout << "     o    \n";
 	cout << "    \\|/  \n";
@@ -49,12 +49,12 @@ void WalkMan()//declaring function
 
 char Play()
 {
-	char guessLetter, realLetter;//declarung 2 varibles
-	realLetter = 'o';
+	char guess, letter;//declarung 2 varibles
+	letter = 'o';
 	for (int i = 0; i < 3; i++)
 	{
-		cin >> guessLetter;
-		if (guessLetter == realLetter)//checking condition 
+		cin >> guess;
+		if (guess == letter)//checking condition 
 		{
 			cout << "\nYour guess is correct!\n";
 			WalkMan();
@@ -72,16 +72,16 @@ char Play()
 			}
 		}
 	}
-	return(guessLetter);//returning the value of the guess number
+	return(guess);//returning the value of the guess number
 }
 
 
 int main()
 {
-	int dashes = 67;
+	int dashes = 62;
 	string answer;
 
-	cout << "\nWelcome to play HangMan. This game is to check your spelling skill.\n";
+	cout << "\nWelcome to Hangman. This game is to check your spelling skill.\n";
 
 	Line(dashes);
 	cout << "\n";
